@@ -1,9 +1,9 @@
 from django.db import models
-from django.utils import timezone
 
-class Fornecedor(models.Model):
+
+class Fabricante(models.Model):
     """
-    Modelo para armazenar os dados dos fornecedores.
+    Modelo para armazenar os dados dos fabricantes.
     """
 
     nome = models.CharField(max_length=255, blank=True, null=True, help_text="Nome comercial.")
@@ -20,13 +20,10 @@ class Fornecedor(models.Model):
     telefone = models.CharField(max_length=20, blank=True)
     email = models.EmailField(max_length=255, unique=True)
     nome_contato = models.CharField(max_length=100, blank=True)
-    
-    data_cadastro = models.DateTimeField(default=timezone.now)
-
     def __str__(self):
         return self.nome
     
     class Meta:
-        verbose_name = "Fornecedor"
-        verbose_name_plural = "Fornecedores"
+        verbose_name = "Fabricante"
+        verbose_name_plural = "Fabricantes"
         ordering = ['nome']
