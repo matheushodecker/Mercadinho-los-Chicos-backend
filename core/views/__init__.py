@@ -1,6 +1,5 @@
 from .user import UserViewSet
 from .fornecedor import FornecedorViewSet
-<<<<<<< HEAD
 from .categoria import CategoriaViewSet
 from .produto import ProdutoViewSet
 from .cliente import ClienteViewSet
@@ -31,6 +30,3 @@ __all__ = [
     'RelatorioVendaViewSet',
     'RelatorioEstoqueViewSet'
 ]
-=======
-from .produto import ProdutoViewSet
->>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650
