@@ -1,5 +1,6 @@
 from .user import UserSerializer
 from .fornecedor import FornecedorSerializer
+<<<<<<< HEAD
 from .categoria import CategoriaSerializer
 from .produto import ProdutoSerializer
 from .cliente import ClienteSerializer
@@ -33,3 +34,6 @@ __all__ = [
     'RelatorioVendaSerializer',
     'RelatorioEstoqueSerializer'
 ]
+=======
+from .produto import ProdutoSerializer
+>>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650

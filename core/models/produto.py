@@ -1,4 +1,5 @@
 from django.db import models
+<<<<<<< HEAD
 from django.utils import timezone
 from .categoria import Categoria
 from .fornecedor import Fornecedor
@@ -41,10 +42,25 @@ class Produto(models.Model):
         if self.preco_custo and self.preco_venda:
             self.margem_lucro_percentual = ((self.preco_venda - self.preco_custo) / self.preco_custo) * 100
         super().save(*args, **kwargs)
+=======
+
+
+from core.models.fornecedor import Fornecedor
+
+
+class Produto(models.Model):
+    nome = models.CharField(max_length=255)
+    descricao = models.TextField()
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
+    imagem = models.ImageField(upload_to='produtos/', null=True, blank=True)
+    quantidade_estoque = models.PositiveIntegerField()
+    fornecedor = models.ForeignKey(Fornecedor, on_delete=models.PROTECT, null=True)
+>>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650
 
     def __str__(self):
         return self.nome
 
+<<<<<<< HEAD
     @property
     def margem_lucro(self):
         """Calcula a margem de lucro em percentual."""
@@ -66,3 +82,8 @@ class Produto(models.Model):
         verbose_name = "Produto"
         verbose_name_plural = "Produtos"
         ordering = ['nome']
+=======
+    class Meta:
+        verbose_name = 'Produto'
+        verbose_name_plural = 'Produtos'
+>>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650

@@ -1,11 +1,16 @@
 from rest_framework.viewsets import ModelViewSet
+<<<<<<< HEAD
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django.db.models import F
+=======
+
+>>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650
 from core.models import Produto
 from core.serializers.produto import ProdutoSerializer
 
 class ProdutoViewSet(ModelViewSet):
+<<<<<<< HEAD
     queryset = Produto.objects.filter(ativo=True)
     serializer_class = ProdutoSerializer
     
@@ -28,3 +33,7 @@ class ProdutoViewSet(ModelViewSet):
             except Produto.DoesNotExist:
                 return Response({'error': 'Produto não encontrado'}, status=404)
         return Response({'error': 'Código não informado'}, status=400)
+=======
+    queryset = Produto.objects.all()
+    serializer_class = ProdutoSerializer
+>>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650

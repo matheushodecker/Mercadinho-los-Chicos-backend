@@ -52,6 +52,7 @@ class UserAdmin(BaseUserAdmin):
 # Registrar todos os modelos
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Fornecedor)
+<<<<<<< HEAD
 admin.site.register(models.Categoria)
 admin.site.register(models.Produto)
 admin.site.register(models.Cliente)
@@ -69,3 +70,6 @@ admin.site.register(models.Promocao)
 admin.site.register(models.ProdutoPromocao)
 admin.site.register(models.RelatorioVenda)
 admin.site.register(models.RelatorioEstoque)
+=======
+admin.site.register(models.Produto)
+>>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650
