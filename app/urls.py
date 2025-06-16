@@ -7,24 +7,21 @@ from drf_spectacular.views import (
 )
 from rest_framework.routers import DefaultRouter
 
-<<<<<<< HEAD
 from core.views import (
-    UserViewSet, CategoriaViewSet, 
-    ProdutoViewSet, ClienteViewSet, FuncionarioViewSet, 
-    CargoViewSet, EstoqueViewSet, MovimentacaoEstoqueViewSet, 
-    CompraViewSet, VendaViewSet, FormaPagamentoViewSet, 
-    PagamentoViewSet, PromocaoViewSet, RelatorioVendaViewSet, 
-    RelatorioEstoqueViewSet
+    UserViewSet, FornecedorViewSet, FabricanteViewSet,
+    CategoriaViewSet, ProdutoViewSet, ClienteViewSet,
+    FuncionarioViewSet, CargoViewSet, EstoqueViewSet,
+    MovimentacaoEstoqueViewSet, CompraViewSet, VendaViewSet,
+    FormaPagamentoViewSet, PagamentoViewSet, PromocaoViewSet,
+    RelatorioVendaViewSet, RelatorioEstoqueViewSet
 )
-=======
-from core.views import UserViewSet, FornecedorViewSet, ProdutoViewSet
->>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650
 
 router = DefaultRouter()
 
 # Rotas principais
 router.register(r'usuarios', UserViewSet, basename='usuarios')
-<<<<<<< HEAD
+router.register(r'fornecedores', FornecedorViewSet, basename='fornecedores')
+router.register(r'fabricantes', FabricanteViewSet, basename='fabricantes')
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
 router.register(r'produtos', ProdutoViewSet, basename='produtos')
 router.register(r'clientes', ClienteViewSet, basename='clientes')
@@ -49,11 +46,6 @@ router.register(r'promocoes', PromocaoViewSet, basename='promocoes')
 # Rotas de relatórios
 router.register(r'relatorios-vendas', RelatorioVendaViewSet, basename='relatorios-vendas')
 router.register(r'relatorios-estoque', RelatorioEstoqueViewSet, basename='relatorios-estoque')
-=======
-router.register(r'fornecedores', FornecedorViewSet, basename='fornecedores')
-router.register(r'produtos', ProdutoViewSet, basename='produtos')
-
->>>>>>> 71aa74115a60bcd504a86ba66b965479b4e1a650
 
 urlpatterns = [
     path('admin/', admin.site.urls),
