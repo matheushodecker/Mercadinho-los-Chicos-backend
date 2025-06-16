@@ -8,7 +8,6 @@ from django.utils.translation import gettext_lazy as _
 
 from core import models
 
-
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
 
@@ -50,7 +49,23 @@ class UserAdmin(BaseUserAdmin):
         ),
     )
 
-
+# Registrar todos os modelos
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Fornecedor)
-admin.site.register(models.Fabricante)
+admin.site.register(models.Categoria)
+admin.site.register(models.Produto)
+admin.site.register(models.Cliente)
+admin.site.register(models.Funcionario)
+admin.site.register(models.Cargo)
+admin.site.register(models.Estoque)
+admin.site.register(models.MovimentacaoEstoque)
+admin.site.register(models.Compra)
+admin.site.register(models.ItemCompra)
+admin.site.register(models.Venda)
+admin.site.register(models.ItemVenda)
+admin.site.register(models.FormaPagamento)
+admin.site.register(models.Pagamento)
+admin.site.register(models.Promocao)
+admin.site.register(models.ProdutoPromocao)
+admin.site.register(models.RelatorioVenda)
+admin.site.register(models.RelatorioEstoque)
