@@ -8,7 +8,7 @@ from drf_spectacular.views import (
 from rest_framework.routers import DefaultRouter
 
 from core.views import (
-    UserViewSet, FornecedorViewSet, FabricanteViewSet,
+    UserViewSet, FornecedorViewSet,
     CategoriaViewSet, ProdutoViewSet, ClienteViewSet,
     FuncionarioViewSet, CargoViewSet, EstoqueViewSet,
     MovimentacaoEstoqueViewSet, CompraViewSet, VendaViewSet,
@@ -21,7 +21,6 @@ router = DefaultRouter()
 # Rotas principais
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r'fornecedores', FornecedorViewSet, basename='fornecedores')
-router.register(r'fabricantes', FabricanteViewSet, basename='fabricantes')
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
 router.register(r'produtos', ProdutoViewSet, basename='produtos')
 router.register(r'clientes', ClienteViewSet, basename='clientes')
